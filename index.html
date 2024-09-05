@@ -17,6 +17,7 @@
             font-family: 'Roboto', sans-serif;
             color: #333;
             line-height: 1.6;
+            background-color: #f4f7fc;
         }
 
         .container {
@@ -35,6 +36,7 @@
         .header h1 {
             color: #fff;
             font-size: 2.5rem;
+            letter-spacing: 2px;
         }
 
         /* Image Section */
@@ -46,13 +48,14 @@
         .image-section img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
         /* Intro Section */
         .intro {
             text-align: center;
-            padding: 40px 0;
+            padding: 60px 0;
             background-color: #f8f9fa;
         }
 
@@ -70,6 +73,7 @@
         }
 
         /* Links Section */
+         /* Links Section */
         .links {
             text-align: center;
             padding: 40px 0;
@@ -111,7 +115,7 @@
         /* Audio Section */
         .audio-section {
             background-color: #f8f9fa;
-            padding: 40px 0;
+            padding: 60px 0;
             text-align: center;
         }
 
@@ -121,7 +125,7 @@
         }
 
         .audio-player {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .audio-player h4 {
@@ -130,34 +134,85 @@
             color: #007bff;
         }
 
-        /* Video Section */
-        .video-section {
+        /* Testimonies Section */
+        .testimonies {
+            background: linear-gradient(135deg, #f4f7fc, #e9ecef);
+            padding: 60px 0;
             text-align: center;
-            padding: 40px 0;
         }
 
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: #000;
+        .testimonies h3 {
+            font-size: 2rem;
+            margin-bottom: 40px;
         }
 
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
+        .testimony {
+            display: inline-block;
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 12px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .testimony p {
+            font-size: 1rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .testimony h4 {
+            font-size: 1.1rem;
+            margin-top: 15px;
+            color: #333;
+        }
+
+        /* Mission & Vision Section */
+        .mission-vision {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .mission-vision h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .mission-vision .row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .mission-vision .card {
+            flex: 1;
+            min-width: 250px;
+            margin: 20px;
+            padding: 30px;
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .mission-vision .card h3 {
+            font-size: 1.8rem;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .mission-vision .card p {
+            font-size: 1.1rem;
+            color: #666;
         }
 
         /* WhatsApp Section */
         .whatsapp-section {
             background: #25d366;
-            padding: 40px 0;
+            padding: 60px 0;
             text-align: center;
             color: #fff;
         }
@@ -173,12 +228,12 @@
         }
 
         .whatsapp-button {
-            padding: 12px 30px;
+            padding: 15px 40px;
             background-color: #075e54;
             color: #fff;
             font-size: 1.1rem;
             border-radius: 30px;
-            transition: all 0.3s ease;
+            transition: background 0.3s ease;
             font-weight: bold;
         }
 
@@ -190,7 +245,7 @@
         .footer {
             background-color: #333;
             color: #fff;
-            padding: 20px 0;
+            padding: 40px 0;
             text-align: center;
         }
 
@@ -216,6 +271,39 @@
         .footer-links a:hover {
             text-decoration: underline;
         }
+		
+		}
+
+        /* Video Section */
+        .video-section {
+            text-align: center;
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-section h1 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
 
         /* Responsive Design */
         @media screen and (max-width: 768px) {
@@ -224,8 +312,25 @@
             }
 
             .link-box {
-                width: 90%;
-                margin: 10px auto;
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .container {
+                width: 95%;
+            }
+
+            .audio-section h3, .video-section h1 {
+                font-size: 1.8rem;
+            }
+
+            .mission-vision .row {
+                display: block;
+            }
+
+            .mission-vision .card {
+                width: 100%;
+                margin: 20px 0;
             }
         }
     </style>
@@ -244,11 +349,10 @@
             <img src="https://webapp.geenillgroupsofcompanies.com/wp-content/uploads/2024/09/55444.png" alt="Fast-Hired And Travels">
         </div>
     </section>
-  
-    <!-- Video Section -->
+
+<!-- Video Section -->
     <section class="video-section">
         <div class="container">
-            <h1>PROMO VIDEO</h1>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/cvIuSnnS9Xs" frameborder="0" allowfullscreen></iframe>
             </div>
@@ -258,16 +362,17 @@
     <!-- Intro Section -->
     <section class="intro">
         <div class="container">
-            <h2>Welcome to Fast-Hired And Travels</h2>
-            <p>In partnership with Susani Realties And Motors and Adamantis Studios, we provide elite holistic marketing, HR, Real Estate and branding solutions. With over 2 million candidates nationwide, we can help you fill any vacancy seamlessly.</p>
+            <h2>Fast-Hired And Travels Recruitment Services</h2>
+            <p>We offer world-class recruitment and staffing solutions, connecting top talent to leading companies globally. Our mission is to provide fast, efficient, and reliable recruitment services to meet your staffing needs.</p>
         </div>
     </section>
 
     <!-- Links Section -->
+    <!-- Links Section -->
     <section class="links">
         <div class="container">
             <div class="link-box">
-                <h3>Company Registration</h3>
+                <h3>Are You A Company Seeking A Candidate?</h3>
                 <a href="https://bit.ly/Company_Reg">Register Your Company</a>
             </div>
             <div class="link-box">
@@ -275,7 +380,7 @@
                 <a href="https://bit.ly/domestic-regforms">Register for Domestic Workers</a>
             </div>
             <div class="link-box">
-                <h3>Download Our E-Book</h3>
+                <h3>Check Out Our E-Book For Home Owners</h3>
                 <a href="https://bit.ly/DomesticWorker_theftcase">Domestic Worker Theft Case</a>
             </div>
             <div class="link-box">
@@ -293,7 +398,7 @@
     <!-- Audio Section -->
     <section class="audio-section">
         <div class="container">
-            <h3>Listen to Our Audio Files</h3>
+            <h3>Audio Files</h3>
             <div class="audio-player">
                 <h4>Candidates We Manage</h4>
                 <audio controls>
@@ -339,6 +444,35 @@
         </div>
     </section>
 
+    <!-- Testimonies Section -->
+    <section class="testimonies">
+        <div class="container">
+            <h3>What Our Clients Say</h3>
+            <div class="testimony">
+                <p>"Fast-Hired helped us hire the best talent quickly and easily. Highly recommend!"</p>
+                <h4>- Sarah, HR Manager</h4>
+            </div>
+            <!-- Other testimonies -->
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision">
+        <div class="container">
+            <h2>Our Mission & Vision</h2>
+            <div class="row">
+                <div class="card">
+                    <h3>Our Mission</h3>
+                    <p>To connect companies with the right talent swiftly and effectively, enhancing their ability to grow and succeed.</p>
+                </div>
+                <div class="card">
+                    <h3>Our Vision</h3>
+                    <p>To become a global leader in recruitment and staffing services, known for excellence, reliability, and innovation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- WhatsApp Section -->
     <section class="whatsapp-section">
         <div class="container">
@@ -347,7 +481,7 @@
             <a href="https://bit.ly/4ggMIdJ" class="whatsapp-button">Send A WhatsApp</a>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
