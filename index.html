@@ -16,6 +16,7 @@
         body {
             font-family: 'Roboto', sans-serif;
             color: #333;
+            line-height: 1.6;
         }
 
         .container {
@@ -33,7 +34,7 @@
 
         .header h1 {
             color: #fff;
-            font-size: 2rem;
+            font-size: 2.5rem;
         }
 
         /* Image Section */
@@ -64,6 +65,8 @@
         .intro p {
             font-size: 1.2rem;
             color: #666;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         /* Links Section */
@@ -73,12 +76,25 @@
         }
 
         .link-box {
-            margin-bottom: 20px;
+            display: inline-block;
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            max-width: 300px;
+            text-align: center;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .link-box:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .link-box h3 {
             font-size: 1.5rem;
             color: #007bff;
+            margin-bottom: 15px;
         }
 
         .link-box a {
@@ -200,6 +216,18 @@
         .footer-links a:hover {
             text-decoration: underline;
         }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .intro h2 {
+                font-size: 2rem;
+            }
+
+            .link-box {
+                width: 90%;
+                margin: 10px auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -217,14 +245,10 @@
         </div>
     </section>
   
-<!-- Video Section -->
+    <!-- Video Section -->
     <section class="video-section">
         <div class="container">
-            <header class="header">
-        <div class="container">
             <h1>PROMO VIDEO</h1>
-        </div>
-    </header>
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/cvIuSnnS9Xs" frameborder="0" allowfullscreen></iframe>
             </div>
@@ -235,7 +259,7 @@
     <section class="intro">
         <div class="container">
             <h2>Welcome to Fast-Hired And Travels</h2>
-            <p>In partnership with Fashionably Hired and Adamanits Studios, we provide elite holistic marketing and branding solutions. With over 2 million candidates nationwide, we can help you fill any vacancy seamlessly.</p>
+            <p>In partnership with Fashionably Hired and Adamantis Studios, we provide elite holistic marketing and branding solutions. With over 2 million candidates nationwide, we can help you fill any vacancy seamlessly.</p>
         </div>
     </section>
 
@@ -310,7 +334,7 @@
         </div>
     </section>
 
-  <!-- WhatsApp Section -->
+    <!-- WhatsApp Section -->
     <section class="whatsapp-section">
         <div class="container">
             <h3>Contact Us On WhatsApp</h3>
